@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>switch btn </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+<style>
+    :root {
+        --handleoffset: 20px;
+        --b1: 110 18% 20%;
+        --bc: 220 49% 84%;
+        --animation-input: 0.2s;
+    }
+    input {
+        transition: background, box-shadow var(--animation-input, 0.2s) ease-in-out;
+        cursor: pointer;
+        border-color: hsl(var(--bc) / var(--tw-border-opacity));
+        width: 40px;
+        height: 20px;
+        border-radius: var(--rounded-badge, 10px);
+    }
+    input:checked {
+        box-shadow: var(--handleoffset) 0 0 2px hsl(var(--b1)) inset, 0 0 0 2px hsl(var(--b1)) inset;
+    }
+    input {
+        box-shadow: calc(var(--handleoffset) * -1) 0 0 2px hsl(var(--b1)) inset,
+        0 0 0 2px hsl(var(--b1)) inset;
+    }
+</style>
+</head>
+<body>
+<div class="flex h-screen w-screen overflow-hidden items-center justify-center">
+    <input type="checkbox" class="appearance-none " />
+</div>
+
+</body>
+</html>
